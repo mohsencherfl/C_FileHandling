@@ -24,5 +24,5 @@ int main()
         printf("Error! File failed to open.");
     }
 
-    printf("\n%d \n", characterCount);
+    printf("\nTotal number of characters in the file is = %d \n", characterCount);
 }
