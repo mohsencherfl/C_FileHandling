@@ -3,7 +3,7 @@
 
 int main()
 {
-    int characterCount = 0;
+    int totalLines = 0;
     char character;
 
     FILE *file = fopen("output.txt", "r");
@@ -13,9 +13,9 @@ int main()
         while((character = fgetc(file)) != EOF)
         {
             if(character == '\n')
-                characterCount++;
+                totalLines++;
         }
-        characterCount++;   // Count the last missing line.
+        totalLines++;   // Count the last missing line.
         fclose(file);
     }
     else
@@ -23,7 +23,7 @@ int main()
         printf("Error! File failed to open.");
     }
 
-    printf("Total number of lines in the file is = %d \n", characterCount);
+    printf("Total number of lines in the file is = %d \n", totalLines);
 
     return 0;
 }
