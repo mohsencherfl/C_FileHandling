@@ -1,0 +1,2 @@
+Hello there!
+Can you find out how many characters there are in this file?

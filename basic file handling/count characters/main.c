@@ -6,7 +6,7 @@ int main()
     int characterCount = 0;
     char character;
 
-    FILE *file = fopen("myFile.txt", "r");
+    FILE *file = fopen("output.txt", "r");
 
     if(file != NULL)
     {
