@@ -1,0 +1,2 @@
+In this project we are going to see which particular 
+character(letter) has appeared most in a given file.
