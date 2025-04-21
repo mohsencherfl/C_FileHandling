@@ -25,17 +25,19 @@ void swapPoints(Point* p1, Point* p2, FILE* fp, int i)
 void reversePointsOrder(char* filename)
 {
     FILE* fp = fopen(filename, "rb+");
-    Point p1, p2, temp;
     if(!fp)
     {
         printf("Failed to open the file! \n");
         return;
     }
-    int n = 0;
+
+    Point p1, p2, temp;
+    int totalPoints = 0;
+
     while(fread(&temp, sizeof(Point), 1, fp))
         n++;
 
-    for(int i=0; i<n/2; i++)
+    for(int i=0; i<totalPoints/2; i++)
     {
         readPoints(&p1, &p2, fp, i);
         swapPoints(&p1, &p2, fp, i);
