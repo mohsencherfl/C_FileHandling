@@ -55,7 +55,10 @@ void removeSpecificPoint(char* filename, int* pNum)
     {
         checkUserInput(pNum, totalPoints);
         if(*pNum == 0)
+        {
+            fclose(fp);
             return;
+        }
         Point* pointArray = (Point*)malloc( (totalPoints * sizeof(Point)) - (1 * sizeof(Point)) );
 
         fseek(fp, 0, SEEK_SET);
@@ -81,7 +84,10 @@ void removeSpecificPoint(char* filename, int* pNum)
     {
         checkUserInput(pNum, totalPoints);
         if(*pNum == 0)
+        {
+            fclose(fp);
             return;
+        }
         fp = fopen(filename, "wb");
         if(fp == NULL)
         {
@@ -94,6 +100,7 @@ void removeSpecificPoint(char* filename, int* pNum)
     }
     else
         printf("The file is empty. \n");
+        fclose(fp);
 }
 
 int main()
