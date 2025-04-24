@@ -39,7 +39,7 @@ int checkUserInput(int* pNum, int totalPoints)
     }
 }
 
-void testF(char* filename)
+void removeSpecificPoint(char* filename)
 {
     FILE* fp = fopen(filename, "rb");
     FILE* temp = fopen("temp.bin", "wb");
@@ -95,7 +95,7 @@ void testF(char* filename)
 
 int main()
 {
-    testF("myFile.bin");
+    removeSpecificPoint("myFile.bin");
 
     return 0;
 }
