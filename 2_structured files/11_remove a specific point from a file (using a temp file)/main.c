@@ -43,7 +43,7 @@ void removeSpecificPoint(char* filename)
 {
     FILE* fp = fopen(filename, "rb");
     FILE* temp = fopen("temp.bin", "wb");
-    if(!fp)
+    if(!fp || !temp)
     {
         printf("Failed to open the file. \n");
         return;
